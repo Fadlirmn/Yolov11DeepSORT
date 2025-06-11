@@ -52,7 +52,7 @@ def main():
     # Load YOLO model.
     # The tracebacks indicated errors with 'best.pt'.
     # Change 'best.pt' to your actual model file name if different (e.g., 'yolo11m.pt').
-    model_path = 'best70s_15Kpic.pt'
+    model_path = 'best70_12k.pt'
     try:
         model = YOLO(model_path)
         print(f"Successfully loaded YOLO model from {model_path}")
@@ -69,7 +69,7 @@ def main():
     # Vehicle class IDs in COCO dataset that YOLO might detect.
     # Common classes: car (2), motorcycle (3), bus (5), truck (7)
     # Adjust these IDs if your model uses a different dataset or class mapping.
-    VEHICLE_CLASS_IDS = [2, 3, 5, 7]
+    VEHICLE_CLASS_IDS = [0, 3, 1 , 2]
 
     input_video_path = 'video2.mp4' # Replace with your input video file
     output_video_path = 'output_vehicle_tracking.avi'
