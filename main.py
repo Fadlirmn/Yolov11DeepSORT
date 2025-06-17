@@ -117,7 +117,7 @@ def main():
                 class_id = int(box.cls[0].cpu().numpy())
 
                 # Filter for vehicle classes and confidence threshold
-                if class_id in VEHICLE_CLASS_IDS and confidence >= 0.3:
+                if class_id in VEHICLE_CLASS_IDS and confidence >= 0.25:
                     w = x2 - x1
                     h = y2 - y1
                     # DeepSort expects detections in format: ([x, y, w, h], confidence, class_name/id)
